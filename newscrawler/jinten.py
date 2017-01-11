@@ -8,7 +8,6 @@ knifewolf@126.com
 """
 
 import asyncio
-import logging
 
 import aiohttp
 import uvloop
