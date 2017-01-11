@@ -1,0 +1,2 @@
+# goldmap
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dca63522b1ee415a89d81085d545dd0f)](https://www.codacy.com/app/titainium/goldmap?utm_source=github.com&utm_medium=referral&utm_content=titainium/goldmap&utm_campaign=badger)
