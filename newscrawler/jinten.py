@@ -8,8 +8,12 @@ knifewolf@126.com
 """
 
 import asyncio
+import json
+
+from pyquery import PyQuery as pq
 
 import aiohttp
+import asyncpg
 import uvloop
 
 from config import JINTEN_LOGGER
@@ -24,11 +28,22 @@ async def fetch(session, url):
 
 async def main(loop):
     try:
-        async with aiohttp.ClientSession(loop = loop) as session:
-            html = await fetch(session, 'https://news.jin10.com/article/11412')
+        conn_pool = await asyncpg.create_pool(database = 'webCrawler', user = 'titainium', password = 'manmade19')
 
-            with open('sample.html', 'w') as html_file:
-                html_file.write(html)
+        async with conn_pool.acquire() as connection:
+            async with connection.transaction():
+                result = await connection.fetchrow("""select * from target_sites where id = 1""")
+        
+        async with aiohttp.ClientSession(loop = loop) as session:
+            html = await fetch(session, result['target_url'] + result['relay_point'])
+        
+        insect_food = pq(html, parser = 'html')
+        raw_material = json.dumps({'raw': insect_food(".jin-news-article").html()})
+        semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article").text()})
+        
+        async with conn_pool.acquire() as connection:
+            async with connection.transaction():
+                result = await connection. execute("""INSERT INTO jin10.insect_food(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
     except Exception:
         JINTEN_LOGGER.exception("messages")
 
