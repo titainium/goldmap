@@ -19,7 +19,7 @@ async def fetch(session, url):
         with aiohttp.Timeout(10, loop = session.loop):
             async with session.get(url) as response:
                 return await response.text()
-    except Exception as e:
+    except Exception:
         JINTEN_LOGGER.exception("messages")
 
 async def main(loop):
@@ -29,7 +29,7 @@ async def main(loop):
 
             with open('sample.html', 'w') as html_file:
                 html_file.write(html)
-    except Exception as e:
+    except Exception:
         JINTEN_LOGGER.exception("messages")
 
 if __name__ == '__main__':
