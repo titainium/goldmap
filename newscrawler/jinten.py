@@ -12,7 +12,7 @@ import asyncio
 import aiohttp
 import uvloop
 
-from config import *
+from config import JINTEN_LOGGER
 
 async def fetch(session, url):
     try:
