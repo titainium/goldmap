@@ -28,7 +28,7 @@ async def fetch(session, url):
 
 async def main(loop):
     try:
-        conn_pool = await asyncpg.create_pool(database = 'webCrawler', user = 'titainium', password = 'manmade19')
+        conn_pool = await asyncpg.create_pool(database = 'webCrawler', user = 'titainium')
 
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
@@ -43,7 +43,7 @@ async def main(loop):
         
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
-                result = await connection. execute("""INSERT INTO jin10.insect_food(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
+                result = await connection. execute("""INSERT INTO jin10.insect_foods(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
     except Exception:
         JINTEN_LOGGER.exception("messages")
 
