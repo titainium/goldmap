@@ -35,15 +35,25 @@ async def main(loop):
                 result = await connection.fetchrow("""select * from target_sites where id = 1""")
         
         async with aiohttp.ClientSession(loop = loop) as session:
-            html = await fetch(session, result['target_url'] + result['relay_point'])
+            relay_point = result['relay_point']
+            html = await fetch(session, result['target_url'] + relay_point)
         
         insect_food = pq(html, parser = 'html')
-        raw_material = json.dumps({'raw': insect_food(".jin-news-article").html()})
-        semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article").text()})
+        raw_material = json.dumps({'title': insect_food(".jin-news-article_h").html(),
+                                   'description': insect_food(".jin-news-article_description").html(),
+                                   'content': insect_food(".jin-news-article_content").html()})
+        semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article_content").text()})
         
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
-                result = await connection. execute("""INSERT INTO jin10.insect_foods(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
+                result = await connection. execute("""INSERT INTO jin10.insect_foods(raw_material,
+                                                                                     semi_finished_goods,
+                                                                                     raw_id)
+                                                      VALUES ($1, $2, $3);""",
+                                                   raw_material,
+                                                   semi_finished_goods,
+                                                   relay_point
+                                                   )
     except Exception:
         JINTEN_LOGGER.exception("messages")
 
