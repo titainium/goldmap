@@ -7,8 +7,11 @@ Titainium Deng
 knifewolf@126.com
 """
 
+from datetime import date
+
 import asyncio
 import json
+import os
 
 from pyquery import PyQuery as pq
 
@@ -43,17 +46,44 @@ async def main(loop):
                                    'description': insect_food(".jin-news-article_description").html(),
                                    'content': insect_food(".jin-news-article_content").html()})
         semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article_content").text()})
+        images = insect_food(".jin-news-article_content").find("img")
+        download_files = []
+
+        async with conn_pool.acquire() as connection:
+            async with connection.transaction():
+                result = await connection.execute("""INSERT INTO jin10.insect_foods(raw_material,
+                                                                                     semi_finished_goods,
+                                                                                     raw_id)
+                                                     VALUES ($1, $2, $3);""",
+                                                  raw_material,
+                                                  semi_finished_goods,
+                                                  relay_point
+                                                  )
+                raw_id = await connection.fetchrow("""SELECT id FROM jin10.insect_foods WHERE raw_id = $1;""", relay_point)
+        
+        async with aiohttp.ClientSession(loop = loop) as img_session:
+            if not os.path.isdir(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat())):
+                os.makedirs(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat()))
+
+            for img in images:
+                async with img_session.get(img.attrib["src"]) as img_resp:
+                    with open(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]), "wb") as image_file:
+                        image_file.write(await img_resp.read())
+                        download_files.append((os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]),
+                                               img.attrib["src"]))
         
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
-                result = await connection. execute("""INSERT INTO jin10.insect_foods(raw_material,
-                                                                                     semi_finished_goods,
-                                                                                     raw_id)
-                                                      VALUES ($1, $2, $3);""",
-                                                   raw_material,
-                                                   semi_finished_goods,
-                                                   relay_point
-                                                   )
+                for img_file in download_files:
+                    img_result = await connection.execute("""INSERT INTO jin10.complementary_foods(image_name,
+                                                                                                   image_address,
+                                                                                                   stored_path,
+                                                                                                   food_id)
+                                                             VALUES ($1, $2, $3, $4)""",
+                                                          img_file[0].split("/")[-1],
+                                                          img_file[1],
+                                                          img_file[0],
+                                                          raw_id['id'])
     except Exception:
         JINTEN_LOGGER.exception("messages")
 
