@@ -21,13 +21,21 @@ import uvloop
 
 from config import JINTEN_LOGGER
 
-async def fetch(session, url):
+async def fetch_html(session, url):
     try:
         with aiohttp.Timeout(10, loop = session.loop):
             async with session.get(url) as response:
                 return await response.text()
     except Exception:
-        JINTEN_LOGGER.exception("messages")
+        JINTEN_LOGGER.exception("jinten.fetch_html_messages")
+
+async def fetch_image(session, url):
+    try:
+        with aiohttp.Timeout(10, loop = session.loop):
+            async with session.get(url) as response:
+                return await response.read()
+    except Exception:
+        JINTEN_LOGGER.exception("jinten.fetch_image_messages")
 
 async def main(loop):
     try:
@@ -39,15 +47,32 @@ async def main(loop):
         
         async with aiohttp.ClientSession(loop = loop) as session:
             relay_point = result['relay_point']
-            html = await fetch(session, result['target_url'] + relay_point)
-        
-        insect_food = pq(html, parser = 'html')
-        raw_material = json.dumps({'title': insect_food(".jin-news-article_h").html(),
-                                   'description': insect_food(".jin-news-article_description").html(),
-                                   'content': insect_food(".jin-news-article_content").html()})
-        semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article_content").text()})
-        images = insect_food(".jin-news-article_content").find("img")
-        download_files = []
+            html = await fetch_html(session, result['target_url'] + relay_point)
+            insect_food = pq(html, parser = 'html')
+            raw_material = json.dumps({'title': insect_food(".jin-news-article_h").html(),
+                                       'description': insect_food(".jin-news-article_description").html(),
+                                       'content': insect_food(".jin-news-article_content").html()})
+            semi_finished_goods = json.dumps({'semi': insect_food(".jin-news-article_content").text()})
+            images = insect_food(".jin-news-article_content").find("img")
+            download_files = []
+
+            if not os.path.isdir(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat())):
+                os.makedirs(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat()))
+            
+            for img in images:
+                with open(os.path.join(os.getcwd(),
+                                       "download_imgs",
+                                       "jin10",
+                                       date.today().isoformat(),
+                                       img.attrib["src"].split("/")[-1]),
+                          "wb") as image_file:
+                    image_file.write(await fetch_image(session, img.attrib["src"]))
+                    download_files.append((os.path.join(os.getcwd(),
+                                                        "download_imgs",
+                                                        "jin10",
+                                                        date.today().isoformat(),
+                                                        img.attrib["src"].split("/")[-1]),
+                                           img.attrib["src"]))
 
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
@@ -60,17 +85,6 @@ async def main(loop):
                                                   relay_point
                                                   )
                 raw_id = await connection.fetchrow("""SELECT id FROM jin10.insect_foods WHERE raw_id = $1;""", relay_point)
-        
-        async with aiohttp.ClientSession(loop = loop) as img_session:
-            if not os.path.isdir(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat())):
-                os.makedirs(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat()))
-
-            for img in images:
-                async with img_session.get(img.attrib["src"]) as img_resp:
-                    with open(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]), "wb") as image_file:
-                        image_file.write(await img_resp.read())
-                        download_files.append((os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]),
-                                               img.attrib["src"]))
         
         async with conn_pool.acquire() as connection:
             async with connection.transaction():
