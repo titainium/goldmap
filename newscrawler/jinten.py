@@ -62,7 +62,7 @@ def get_material(html):
     except Exception:
         JINTEN_LOGGER.exception("jinten.get_material_messages")
 
-def save_images(session, images):
+async def save_images(session, images):
     try:
         download_files = []
         
@@ -115,7 +115,8 @@ async def main(loop):
             target_url, relay_point = await get_site(conn_pool)
             raw_material, semi_finished_goods, images = get_material(await fetch_html(session, target_url + relay_point))
             raw_id = await store_material(conn_pool, raw_material, semi_finished_goods, relay_point)
-            await store_images(conn_pool, save_images(session, images), raw_id)
+            download_files = await save_images(session, images)
+            await store_images(conn_pool, download_files, raw_id)
     except Exception:
         JINTEN_LOGGER.exception("messages")
 
