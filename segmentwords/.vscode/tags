@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BaseCutter	../segmentWords.py	/^class BaseCutter:$/;"	kind:class	line:22
+JIEBA_LOGGER	../config.py	/^JIEBA_LOGGER = logging.getLogger("segmentwords.jieba")$/;"	kind:variable	line:20
+__all__	../config.py	/^__all__ = ['JIEBA_LOGGER']$/;"	kind:variable	line:15
+__init__	../segmentWords.py	/^    def __init__(self):$/;"	kind:member	line:27
+__init__.py	../__init__.py	1;"	kind:file	line:1
+config.py	../config.py	1;"	kind:file	line:1
+get_start_id	../segmentWords.py	/^    async def get_start_id(self):$/;"	kind:member	line:39
+get_text	../segmentWords.py	/^    async def get_text(self, id):$/;"	kind:member	line:47
+level	../config.py	/^                    level=logging.DEBUG)$/;"	kind:variable	line:18
+load_user_dict	../segmentWords.py	/^    async def load_user_dict(self):$/;"	kind:member	line:31
+loop	../segmentWords.py	/^    loop = uvloop.new_event_loop()$/;"	kind:variable	line:104
+main	../segmentWords.py	/^async def main():$/;"	kind:function	line:87
+segmentWords.py	../segmentWords.py	1;"	kind:file	line:1
+segment_words	../segmentWords.py	/^    async def segment_words(self, doc, idx):$/;"	kind:member	line:60
+stop_words	../segmentWords.py	/^    async def stop_words(self, word):$/;"	kind:member	line:77

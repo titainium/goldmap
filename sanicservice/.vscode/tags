@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+SANIC_LOGGER	../service_config.py	/^SANIC_LOGGER = logging.getLogger("service.sanic")$/;"	kind:variable	line:20
+__all__	../service_config.py	/^__all__ = ['SANIC_LOGGER']$/;"	kind:variable	line:15
+__init__.py	../__init__.py	1;"	kind:file	line:1
+app	../service_server.py	/^app = Sanic(__name__)$/;"	kind:variable	line:8
+bp_root	../wallstreetCNCrawlerService.py	/^async def bp_root(request):$/;"	kind:function	line:17
+level	../service_config.py	/^                    level=logging.DEBUG)$/;"	kind:variable	line:18
+loop	../service_server.py	/^loop = asyncio.get_event_loop()$/;"	kind:variable	line:14
+server	../service_server.py	/^server = app.create_server(host = '0.0.0.0', port = 7000, debug = True)$/;"	kind:variable	line:13
+service_config.py	../service_config.py	1;"	kind:file	line:1
+service_server.py	../service_server.py	1;"	kind:file	line:1
+task	../service_server.py	/^task = asyncio.ensure_future(server)$/;"	kind:variable	line:15
+wallstreetCNCrawlerService.py	../wallstreetCNCrawlerService.py	1;"	kind:file	line:1
+wallstreetCN_bp	../wallstreetCNCrawlerService.py	/^wallstreetCN_bp = Blueprint('wallstreetCNCrawlerService')$/;"	kind:variable	line:14

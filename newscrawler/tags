@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+IMAGE_DOWNLOAD_DIR	config.py	/^IMAGE_DOWNLOAD_DIR = "download_imgs"$/;"	kind:variable	line:23
+JINTEN_LOGGER	config.py	/^JINTEN_LOGGER = logging.getLogger("webCrawler.jinten")$/;"	kind:variable	line:20
+JINTEN_PREFIX	config.py	/^JINTEN_PREFIX = "jin10"$/;"	kind:variable	line:24
+__all__	config.py	/^__all__ = ['JINTEN_LOGGER', 'IMAGE_DOWNLOAD_DIR', 'JINTEN_PREFIX']$/;"	kind:variable	line:15
+__init__.py	__init__.py	1;"	kind:file	line:1
+config.py	config.py	1;"	kind:file	line:1
+fetch_html	jinten.py	/^async def fetch_html(session, url):$/;"	kind:function	line:26
+fetch_image	jinten.py	/^async def fetch_image(session, url):$/;"	kind:function	line:34
+get_material	jinten.py	/^def get_material(html):$/;"	kind:function	line:52
+get_site	jinten.py	/^async def get_site(conn_pool):$/;"	kind:function	line:42
+jinten.py	jinten.py	1;"	kind:file	line:1
+level	config.py	/^                    level=logging.DEBUG)$/;"	kind:variable	line:18
+loop	jinten.py	/^    loop = uvloop.new_event_loop()$/;"	kind:variable	line:124
+main	jinten.py	/^async def main(loop):$/;"	kind:function	line:110
+save_images	jinten.py	/^async def save_images(session, images):$/;"	kind:function	line:65
+store_images	jinten.py	/^async def store_images(conn_pool, image_files, raw_id):$/;"	kind:function	line:96
+store_material	jinten.py	/^async def store_material(conn_pool, raw_material, semi_finished_goods, relay_point):$/;"	kind:function	line:81

@@ -1,0 +1,383 @@
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 57, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 64, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(seg_docs)
+NameError: name 'seg_docs' is not defined
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(seg_doc[0])
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(list(seg_doc)[0])
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 98, in __next__
+    v = self[self.currI]
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 125, in __getattr__
+    return resp[k]
+KeyError: 'index'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(seg_doc.index(0))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 127, in __getattr__
+    raise  AttributeError("There's no attribute %s" %(k))
+AttributeError: There's no attribute index
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    for item in seg_doc: print(item)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 98, in __next__
+    v = self[self.currI]
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(seg_doc[0])
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 115, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 70, in _developDoc
+    print(docJson["_id"])
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.main_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 93, in main
+    print(dir(seg_doc[0]))
+IndexError: string index out of range
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+jieba.get_text_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 56, in get_text
+    return docs[0] if len(docs) > 0 else ''
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 116, in __getitem__
+    self._developDoc(i)
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/site-packages/pyArango/query.py", line 71, in _developDoc
+    collection = self.database[docJson["_id"].split("/")[0]]
+TypeError: string indices must be integers
+jieba.segment_words_message
+Traceback (most recent call last):
+  File "segmentWords.py", line 63, in segment_words
+    seg_list = jieba.lcut(re.sub(move_pattern, "", doc))
+  File "/home/titainium/anaconda3/envs/newGoldMap/lib/python3.6/re.py", line 191, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object

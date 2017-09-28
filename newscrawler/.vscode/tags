@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+IMAGE_DOWNLOAD_DIR	../crawler_config.py	/^IMAGE_DOWNLOAD_DIR = "download_imgs"$/;"	kind:variable	line:23
+JINTEN_LOGGER	../crawler_config.py	/^JINTEN_LOGGER = logging.getLogger("webCrawler.jinten")$/;"	kind:variable	line:20
+JINTEN_PREFIX	../crawler_config.py	/^JINTEN_PREFIX = "jin10"$/;"	kind:variable	line:24
+WS_LOGGER	../crawler_config.py	/^WS_LOGGER = logging.getLogger("webCrawler.wallstreetcn")$/;"	kind:variable	line:26
+WallStreetCNCrawler	../wallstreetcnCrawler.py	/^class WallStreetCNCrawler:$/;"	kind:class	line:16
+__all__	../crawler_config.py	/^__all__ = ['JINTEN_LOGGER', 'IMAGE_DOWNLOAD_DIR', 'JINTEN_PREFIX', 'WS_LOGGER']$/;"	kind:variable	line:15
+__all__	../wallstreetcnCrawler.py	/^__all__ = ['wallStreetCNCrawler']$/;"	kind:variable	line:14
+__init__	../wallstreetcnCrawler.py	/^    def __init__(self):$/;"	kind:member	line:21
+__init__.py	../__init__.py	1;"	kind:file	line:1
+crawler_config.py	../crawler_config.py	1;"	kind:file	line:1
+fetch_html	../jinten.py	/^async def fetch_html(session, url):$/;"	kind:function	line:26
+fetch_html	../wallstreetcnCrawler.py	/^    async def fetch_html(self, client, url, start, offset):$/;"	kind:member	line:25
+fetch_image	../jinten.py	/^async def fetch_image(session, url):$/;"	kind:function	line:34
+get_html	../wallstreetcnCrawler.py	/^    async def get_html(self, html):$/;"	kind:member	line:35
+get_material	../jinten.py	/^def get_material(html):$/;"	kind:function	line:52
+get_site	../jinten.py	/^async def get_site(conn_pool):$/;"	kind:function	line:42
+get_site	../wallstreetcnCrawler.py	/^    async def get_site(self):$/;"	kind:member	line:53
+jinten.py	../jinten.py	1;"	kind:file	line:1
+level	../crawler_config.py	/^                    level=logging.DEBUG)$/;"	kind:variable	line:18
+loop	../jinten.py	/^    loop = uvloop.new_event_loop()$/;"	kind:variable	line:124
+loop	../wallstreetcnCrawler.py	/^    loop = uvloop.new_event_loop()$/;"	kind:variable	line:99
+main	../jinten.py	/^async def main(loop):$/;"	kind:function	line:110
+main	../wallstreetcnCrawler.py	/^async def main(loop):$/;"	kind:function	line:80
+save_html	../wallstreetcnCrawler.py	/^    async def save_html(self, title_html, title_text, content_html, content_text, start_id, idx):$/;"	kind:member	line:61
+save_images	../jinten.py	/^async def save_images(session, images):$/;"	kind:function	line:65
+store_images	../jinten.py	/^async def store_images(conn_pool, image_files, raw_id):$/;"	kind:function	line:96
+store_material	../jinten.py	/^async def store_material(conn_pool, raw_material, semi_finished_goods, relay_point):$/;"	kind:function	line:81
+wallstreetcnCrawler.py	../wallstreetcnCrawler.py	1;"	kind:file	line:1

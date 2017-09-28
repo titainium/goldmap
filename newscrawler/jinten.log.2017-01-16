@@ -1,0 +1,46 @@
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 86, in main
+    raw_id)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/asyncpg/connection.py", line 174, in execute
+    True, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 157, in bind_execute (asyncpg/protocol/protocol.c:55559)
+  File "asyncpg/protocol/prepared_stmt.pyx", line 122, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg (asyncpg/protocol/protocol.c:51680)
+  File "asyncpg/protocol/codecs/base.pyx", line 134, in asyncpg.protocol.protocol.Codec.encode (asyncpg/protocol/protocol.c:13503)
+  File "asyncpg/protocol/codecs/base.pyx", line 86, in asyncpg.protocol.protocol.Codec.encode_scalar (asyncpg/protocol/protocol.c:12943)
+  File "asyncpg/protocol/codecs/int.pyx", line 36, in asyncpg.protocol.protocol.int4_encode (asyncpg/protocol/protocol.c:27584)
+TypeError: an integer is required (got type Record)
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 60, in main
+    relay_point
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/asyncpg/connection.py", line 174, in execute
+    True, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 165, in bind_execute (asyncpg/protocol/protocol.c:55643)
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "insect_foods_raw_unkey"
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 50, in main
+    html = await fetch(session, result['target_url'] + relay_point)
+NameError: name 'fetch' is not defined
+jinten.fetch_image_messages
+Traceback (most recent call last):
+  File "jinten.py", line 35, in fetch_image
+    async with session.get(url) as response:
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 540, in __aenter__
+    self._resp = yield from self._coro
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 162, in _request
+    url = URL(url).with_fragment(None)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/yarl/__init__.py", line 153, in __init__
+    raise TypeError("Constructor parameter should be str")
+TypeError: Constructor parameter should be str
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 69, in main
+    image_file.write(await fetch_image(session, session.get(img.attrib["src"])))
+TypeError: a bytes-like object is required, not 'NoneType'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 69, in main
+    print(session.attrib["src"])
+AttributeError: 'ClientSession' object has no attribute 'attrib'

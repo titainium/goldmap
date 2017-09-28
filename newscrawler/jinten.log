@@ -1,0 +1,25 @@
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 116, in main
+    raw_material, semi_finished_goods, images = get_material(await fetch_html(session, target_url + relay_point))
+TypeError: 'coroutine' object is not iterable
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 116, in main
+    raw_material, semi_finished_goods, images = get_material(fetch_html(session, target_url + relay_point))
+TypeError: 'coroutine' object is not iterable
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 117, in main
+    raw_material, semi_finished_goods, images = get_material(source_html)
+TypeError: 'coroutine' object is not iterable
+jinten.store_images_messages
+Traceback (most recent call last):
+  File "jinten.py", line 100, in store_images
+    for img_file in image_files:
+TypeError: 'coroutine' object is not iterable
+jinten.get_material_messages
+Traceback (most recent call last):
+  File "jinten.py", line 74, in save_images
+    image_file.write(fetch_image(session, img.attrib["src"]))
+TypeError: a bytes-like object is required, not 'coroutine'

@@ -1,0 +1,294 @@
+message
+Traceback (most recent call last):
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 308, in connect
+    yield from self._create_connection(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 597, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 608, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 580, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "jinten.py", line 21, in fetch
+    async with session.get(url) as response:
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 540, in __aenter__
+    self._resp = yield from self._coro
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 176, in _request
+    conn = yield from self._connector.connect(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 318, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno -2] Cannot connect to host news.jin10.com:443 ssl:True [Name or service not known]
+messages
+Traceback (most recent call last):
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 308, in connect
+    yield from self._create_connection(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 597, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 608, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 580, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "jinten.py", line 21, in fetch
+    async with session.get(url) as response:
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 540, in __aenter__
+    self._resp = yield from self._coro
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client.py", line 176, in _request
+    conn = yield from self._connector.connect(req)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/connector.py", line 318, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno -2] Cannot connect to host news.jin10.com:443 ssl:True [Name or service not known]
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 32, in main
+    html_file.write(html)
+TypeError: write() argument must be str, not None
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 36, in main
+    html = await fetch(session, result['target_url'] + result['relay_point'])
+KeyError: 'relay_point'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 37, in main
+    html = await fetch(session, result['target_url'] + result['relay_point'])
+KeyError: 'relay_point'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 40, in main
+    insect_food = await pq(html, parser = 'html')
+TypeError: object PyQuery can't be used in 'await' expression
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 46, in main
+    result = await connection. execute("""INSERT INTO jin10.insect_food(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/asyncpg/connection.py", line 172, in execute
+    stmt = await self._get_statement(query, timeout)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/asyncpg/connection.py", line 212, in _get_statement
+    state = await protocol.prepare(None, query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 140, in prepare (asyncpg/protocol/protocol.c:55210)
+asyncpg.exceptions.UndefinedTableError: relation "jin10.insect_food" does not exist
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 46, in main
+    result = await connection. execute("""INSERT INTO jin10.insect_foods(raw_material, semi_finished_goods) VALUES ($1, $2);""", raw_material, semi_finished_goods)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/asyncpg/connection.py", line 174, in execute
+    True, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 165, in bind_execute (asyncpg/protocol/protocol.c:55643)
+asyncpg.exceptions.NotNullViolationError: null value in column "raw_id" violates not-null constraint
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 44, in main
+    'content': insect_food(".jin-news-article_content").html})
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'method' is not JSON serializable
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 51, in main
+    async with aiohttp.ClentSession(loop = loop) as session:
+AttributeError: module 'aiohttp' has no attribute 'ClentSession'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 53, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 53, in main
+    print(img.classes())
+TypeError: 'Classes' object is not callable
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 54, in main
+    img_source = await fetch(session, img.attr("src"))
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 55, in main
+    with open(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attr("src").split("/")[-1]), "w") as image_file:
+AttributeError: 'HtmlElement' object has no attribute 'attr'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 55, in main
+    with open(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]), "w") as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/titainium/code/goldmap/newscrawler/download_imgs/jin10/2017-01-14/9904f260238d275cb0d2cd061638eb44.jpg'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 53, in main
+    os.mkdir(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat()))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/titainium/code/goldmap/newscrawler/download_imgs/jin10/2017-01-14'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 53, in main
+    os.mkdir(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), "/"))
+FileExistsError: [Errno 17] File exists: '/'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 53, in main
+    os.mkdirs(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat()))
+AttributeError: module 'os' has no attribute 'mkdirs'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 59, in main
+    image_file.write(img_source)
+TypeError: write() argument must be str, not None
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 59, in main
+    image_file.write(img_source)
+TypeError: a bytes-like object is required, not 'NoneType'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 60, in main
+    image_file.write(img_source)
+TypeError: a bytes-like object is required, not 'NoneType'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 60, in main
+    image_file.write(img_source)
+TypeError: a bytes-like object is required, not 'NoneType'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 60, in main
+    image_file.write(img_source)
+TypeError: a bytes-like object is required, not 'NoneType'
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 60, in main
+    with open(os.path.join(os.getcwd(), "download_imgs", "jin10", date.today().isoformat(), img.attrib["src"].split("/")[-1]), "wb") as image_file:
+NameError: name 'img' is not defined
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 28, in fetch
+    return await response.text()
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 752, in text
+    return self._content.decode(encoding)
+  File "/home/titainium/anaconda3/envs/goldmap/lib/python3.6/encodings/cp1251.py", line 15, in decode
+    return codecs.charmap_decode(input,errors,decoding_table)
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x98 in position 545: character maps to <undefined>
+messages
+Traceback (most recent call last):
+  File "jinten.py", line 62, in main
+    image_file.write(tmp_img)
+TypeError: a bytes-like object is required, not 'NoneType'
